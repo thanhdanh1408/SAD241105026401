@@ -87,7 +87,7 @@ Các cơ chế chính sau đây được xác định cho "Payroll System" dựa
   + Hạn chế quyền chỉnh sửa cho những người quản trị được ủy quyền.
 
 ### 2.2. Cơ sở lý luận cho các cơ chế
-Automated Payroll Calculation:
+- **Automated Payroll Calculation (Tính toán tiền lương tự động)**:
 
 Meets the need for quick and accurate payroll processing for over 5,000 employees, reducing manual errors.
 Timecard Management:
