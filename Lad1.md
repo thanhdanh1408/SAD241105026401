@@ -1,37 +1,37 @@
-# Payroll System Analysis and Design
+# Payroll System Analysis and Design (Phân tích và thiết kế hệ thống Payroll System)
 
-## 1. Architectural Analysis
+## 1. Phân tích kiến ​​trúc
 
-### 1.1. Proposed Architecture
-The recommended architecture for the Payroll System is a **3-tier Architecture**. This model divides the system into three main layers, which ensures scalability, maintainability, and meets the business requirements of the system.
+### 1.1. Kiến trúc đề xuất
+Kiến trúc được đề xuất cho Hệ thống Payroll System là **Kiến trúc 3 tầng**. Mô hình này chia hệ thống thành ba lớp chính, đảm bảo khả năng mở rộng, khả năng bảo trì và đáp ứng các yêu cầu kinh doanh của hệ thống.
 
 - **Presentation Layer**:
-  - The user interface that employees and administrators interact with, allowing input and data queries.
-  - Supports tasks like submitting timecards, selecting payment methods, and viewing reports.
-
+  + Giao diện người dùng mà nhân viên và quản trị viên tương tác, cho phép nhập dữ liệu và truy vấn dữ liệu.
+  + Hỗ trợ các tác vụ như gửi thẻ chấm công, chọn phương thức thanh toán và xem báo cáo.
+    
 - **Business Logic Layer**:
-  - Responsible for executing the core business logic of the system, including:
-    - Automatic payroll calculations.
-    - Timecard processing and order management.
-    - Managing and verifying payment information.
-  - Implemented as services on a central server, handling scheduled payroll runs.
+  + Chịu trách nhiệm thực hiện logic kinh doanh cốt lõi của hệ thống, bao gồm:
+  + Tính toán bảng lương tự động.
+  + Xử lý thẻ chấm công và quản lý đơn hàng.
+  + Quản lý và xác minh thông tin thanh toán.
+  + Được triển khai dưới dạng dịch vụ trên máy chủ trung tâm, xử lý các đợt chạy bảng lương theo lịch trình.
 
 - **Data Access Layer**:
-  - Manages the storage and retrieval of employee data, payroll information, timecards, and other related data in a DB2 database.
-  - Communicates with the existing project management database without disrupting the current system.
+  + Quản lý việc lưu trữ và truy xuất dữ liệu nhân viên, thông tin bảng lương, thẻ chấm công và các dữ liệu liên quan khác trong DB2 database.
+  + Giao tiếp với cơ sở dữ liệu quản lý dự án hiện có mà không làm gián đoạn hệ thống hiện tại.
 
-### 1.2. Rationale for Architectural Choice
-- **Scalability**:  
-  - The 3-tier architecture allows each layer to be scaled independently, enabling interface upgrades without affecting the business logic or database layers.
+### 1.2. Cơ sở lý luận cho sự lựa chọn kiến ​​trúc
+- **Khả năng mở rộng**:  
+  + Kiến trúc 3 lớp cho phép mỗi lớp có thể được mở rộng độc lập, cho phép nâng cấp giao diện mà không ảnh hưởng đến logic kinh doanh hoặc các lớp database.
   
-- **Maintainability**:  
-  - Clear separation of interface, business logic, and data access enables easier development and maintenance.
+- **Khả năng bảo trì**:  
+  + Phân tách rõ ràng interface, business logic, và data access giúp phát triển và bảo trì dễ dàng hơn.
 
-- **Security Requirements**:  
-  - By restricting access to the Business Logic and Data Access layers, sensitive data is protected, ensuring only authorized users can access necessary information.
+- **Yêu cầu bảo mật**:  
+  + Bằng cách hạn chế quyền truy cập vào các lớp Business Logic và Data Access layers, dữ liệu nhạy cảm sẽ được bảo vệ, đảm bảo chỉ những người dùng được ủy quyền mới có thể truy cập thông tin cần thiết.
 
-- **System Integration**:  
-  - The data access layer is designed to interact with the legacy DB2 database, preserving the current system and saving on costs.
+- **Tích hợp hệ thống**:  
+  - Lớp data access được thiết kế để tương tác với DB2 database cũ, bảo toàn hệ thống hiện tại và tiết kiệm chi phí.
 
 ### 1.3. Explanation of Each Component
 1. **Client Layer**:
