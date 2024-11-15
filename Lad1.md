@@ -33,24 +33,23 @@ Kiến trúc được đề xuất cho Hệ thống Payroll System là **Kiến 
 - **Tích hợp hệ thống**:  
   - Lớp data access được thiết kế để tương tác với DB2 database cũ, bảo toàn hệ thống hiện tại và tiết kiệm chi phí.
 
-### 1.3. Explanation of Each Component
+### 1.3. Giải thích từng thành phần
 1. **Client Layer**:
-   - The interface where employees and administrators interact with the system.
-   - Examples: Employees submit timecards, select payment methods; administrators add new employees or generate reports.
-
+    - Giao diện nơi nhân viên và quản trị viên tương tác với hệ thống.
+    - Ví dụ: Nhân viên gửi thẻ chấm công, chọn phương thức thanh toán; quản trị viên thêm nhân viên mới hoặc tạo báo cáo.
 2. **Application Layer**:
-   - Manages processes such as:
-     - Calculating wages based on working hours, orders, and employee type.
-     - Validating conditions for timecards and payment methods.
-   - Executes automated payroll schedules to ensure timely payments.
+   - Quản lý các quy trình như:
+      + Tính lương dựa trên giờ làm việc, đơn đặt hàng và loại nhân viên.
+      + Xác thực các điều kiện cho thẻ chấm công và phương thức thanh toán.
+      + Thực hiện lịch trình tính lương tự động để đảm bảo thanh toán kịp thời.
 
 3. **Database Layer**:
-   - Responsible for storing and managing data.
-   - Ensures requirements such as:
-     - Retrieving employee and project data from the DB2 database.
-     - Storing payroll data, timecards, and reports.
+    - Chịu trách nhiệm lưu trữ và quản lý dữ liệu.
+    - Đảm bảo các yêu cầu như:
+      + Truy xuất dữ liệu nhân viên và dự án từ DB2 database.
+      + Lưu trữ dữ liệu bảng lương, thẻ chấm công và báo cáo.
 
-### 1.4. Package Diagram
-The package diagram below shows the main components and their relationships:
+### 1.4. Package Diagram (Biểu đồ gói)
+Sơ đồ gói bên dưới hiển thị các thành phần chính và mối quan hệ của chúng:
 ![Diagram](https://www.planttext.com/api/plantuml/png/V5D1JiCm4Bpx5LOlmA52ujW3AhG7aAY42eZprjbI2ySEkqwh2FLb77WINy19ar8NDpvwPcTdP-sVh-ynUo1VvaOKeDxX3ULWOZHQBn-WGXh8Jo73KGQOvU25aUIzzKXBKDY1kwDjKVfddQC2oiul3X16Wye_GfK7tHdwbOlnZnAfccFXoBVtMx4LVuPkYi9e1LuxctGLbCaP8oTWL6aQNcnDjG3UkP9CzHfKENAm9po10TAOzL0cBiyrSsYoDtlWfGj0pi06ZNhYs0l36fCfhS7eBEWVWTkZIMl5a-85EONCBItsx-nIKvxQGfps53miW34PzVJsIdQ4excy8woXg2kX3t6k3u6csvcSusvJlD85omNw3QBTjK6MO3FPEcBnxzaDXzSdjZwI9P-iIEwcjoALTrUGxDzKnI6DGWYGNMv8UnHf3ycg9b2HjD335sEqMVsTVm400F__0m00)
 
