@@ -88,28 +88,27 @@ Các cơ chế chính sau đây được xác định cho "Payroll System" dựa
 
 ### 2.2. Cơ sở lý luận cho các cơ chế
 - **Automated Payroll Calculation (Tính toán tiền lương tự động)**:
+  Đáp ứng nhu cầu xử lý tính lương nhanh chóng và chính xác cho hơn 5.000 nhân viên, giảm thiểu sai sót thủ công.
+  
+- **Timecard Management (Quản lý thẻ thời gian)**:
+  Cần thiết để xử lý các loại thẻ chấm công khác nhau (theo giờ, lương) và ghi lại thông tin liên quan đến dự án.
+  
+- **Payment Options (Tùy chọn thanh toán)**:
+  Cung cấp sự linh hoạt và cá nhân hóa cho nhân viên.
 
-Meets the need for quick and accurate payroll processing for over 5,000 employees, reducing manual errors.
-Timecard Management:
+- **System Integration (Tích hợp hệ thống)**:
+  Tận dụng cơ sở dữ liệu hiện có để giảm chi phí và duy trì tính nhất quán của dữ liệu.
 
-Essential for handling different timecard types (hourly, salaried) and recording project-related information.
-Payment Options:
-
-Provides flexibility and personalization for employees.
-System Integration:
-
-Leverages the existing database to reduce costs and maintain data consistency.
-Employee Reports:
-
-Meets the demand for quick information retrieval, providing critical metrics to employees.
-System Security:
-
-Ensures data protection, safeguarding sensitive information (salary, personal information) for each employee.
-2.3. List of Mechanisms
-Mechanism	Description
-Automated Payroll Calculation	Schedule and automate wage calculations for all employee types, including overtime processing.
-Timecard Management	Collect, store, and validate timecard data; process data for hourly employees.
-Payment Options	Support three payment methods with flexible switching options.
-System Integration	Interface with existing DB2 database without disruption.
-Employee Reports	Generate quick, detailed reports that are easily accessible.
-System Security	Ensure restricted access and encryption of sensitive data.
+- **Employee Reports (Báo cáo nhân viên)**:
+  Đáp ứng nhu cầu truy xuất thông tin nhanh chóng, cung cấp các số liệu quan trọng cho nhân viên.
+  
+- **System Security (Bảo mật hệ thống)**:
+  Đảm bảo bảo vệ dữ liệu, bảo mật các thông tin nhạy cảm (tiền lương, thông tin cá nhân) của từng nhân viên.
+  
+### 2.3. Danh sách các cơ chế
+- Tính toán tiền lương tự động: Lên lịch và tự động tính lương cho mọi loại nhân viên, bao gồm cả xử lý làm thêm giờ.
+- Quản lý thẻ chấm công: Thu thập, lưu trữ và xác thực dữ liệu thẻ chấm công; xử lý dữ liệu cho nhân viên theo giờ.
+- Tùy chọn thanh toán: Hỗ trợ ba phương thức thanh toán với các tùy chọn chuyển đổi linh hoạt.
+- Tích hợp hệ thống: Giao diện với cơ sở dữ liệu DB2 hiện có mà không bị gián đoạn.
+- Báo cáo nhân viên: Tạo báo cáo nhanh chóng, chi tiết và dễ truy cập.
+- Hệ thống bảo mật: Đảm bảo hạn chế truy cập và mã hóa dữ liệu nhạy cảm.
