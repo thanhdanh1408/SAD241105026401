@@ -112,3 +112,51 @@ Các cơ chế chính sau đây được xác định cho "Payroll System" dựa
 - Tích hợp hệ thống: Giao diện với cơ sở dữ liệu DB2 hiện có mà không bị gián đoạn.
 - Báo cáo nhân viên: Tạo báo cáo nhanh chóng, chi tiết và dễ truy cập.
 - Hệ thống bảo mật: Đảm bảo hạn chế truy cập và mã hóa dữ liệu nhạy cảm.
+
+
+
+## 3. Use Case Analysis: Select Payment
+### 3.1. Identified Classes (Các lớp đã xác định)
+- **Employee**: Lưu trữ thông tin chi tiết của nhân viên, bao gồm phương thức thanh toán đã chọn.
+- **PaymentProcessor**: Xử lý việc lựa chọn và xác nhận phương thức thanh toán.
+- **DatabaseHandler**: Tương tác với cơ sở dữ liệu để lưu trữ và truy xuất thông tin phương thức thanh toán.
+
+### 3.2. Sequence Diagram (Biểu đồ trình tự)
+Biểu đồ trình tự minh họa quy trình lựa chọn phương thức thanh toán:
+
+![Diagram](https://www.planttext.com/api/plantuml/png/N91BRW8n44JtFaMBFHTWWO0C4YmYZOGc-uvTW1MFFR8R8SwMHOwKAz33P_WixNf-NUt_txzP4SvoQ8DXAodJikr2EW6cqsjlVSTHQDGKP5f7GTwonOYuKBD-HMe-jOXIvsHHIieNQ3YziXKBVtF1YgCBkABLmfZxS1fFrKyJsY302jtSz0dP9sSqKc1mA_V5mJiMt1xu5CqZLhPQz3BT3-ykJSPlihdzYUaOu7PujjmxDTrrqi7sYNfAOINxKeeCAqpe8yMjp-qmyT5jXkZqoyy0003__mC0)
+
+#### 3.3. Class Responsibilities and Attributes (Trách nhiệm và Thuộc tính của Lớp)
+(Class	- Responsibilities - Attributes)
+**Employee** - Lưu trữ tùy chọn thanh toán của nhân viên - employeeID, paymentMethod.
+**PaymentProcessor** - Xác thực và cập nhật lựa chọn thanh toán của nhân viên - N/A.
+**DatabaseHandler** - Xử lý các giao dịch cơ sở dữ liệu để lưu trữ các phương thức thanh toán - N/A.
+
+
+
+## 4. Use Case Analysis: Maintain Timecard
+### 4.1. Identified Classes (Các lớp đã xác định)
+- **Employee**: Lưu trữ thông tin chi tiết về nhân viên và hồ sơ chấm công.
+- **TimecardManager**: Xử lý và xác nhận việc gửi thẻ chấm công.
+- **DatabaseHandler**: Quản lý việc lưu trữ và truy xuất dữ liệu thẻ chấm công.
+
+### 4.2. Sequence Diagram (Biểu đồ trình tự)
+Biểu đồ trình tự phác thảo quy trình duy trì thẻ chấm công:
+![Diagram](https://www.planttext.com/api/plantuml/png/N90x3i8m38RtdC9YxmKw81v5WW6M0hj9N1IHHvMa8Cx6m96u0cxL5fKjyl_v-wryNkz5J1XIOur0cNo0ZQsDVnA9ciTQwXfTWjafKe2TInGgb3G3Z73QJP6ZjYGng3qwl5BecFuz1GjCUC58MtJAz62n4c9eXcpESiXXq_R1u8LsJt30SUzbven6AqmqOcB862jMJ9Hufpy9pxE9PIblpZyCgIlzzeSprjvLEjXErFLpCDwQmy4dNJr_3MLpiJf6xHq_fQGOnOASQd_u2m00__y30000)
+
+### 4.3. Class Responsibilities and Attributes (Trách nhiệm và Thuộc tính của lớp)
+(Class - Responsibilities - Attributes)
+**Employee** - Lưu trữ hồ sơ chấm công của nhân viên - employeeID, timecards
+**TimecardManager** - Xác thực và xử lý dữ liệu thẻ chấm công - N/A
+**DatabaseHandler** - Lưu trữ và truy xuất thông tin thẻ chấm công - N/A
+
+
+
+## 5. Hợp nhất kết quả phân tích
+### 5.1. Sơ đồ lớp thống nhất
+Biểu đồ lớp thống nhất hợp nhất các lớp và mối quan hệ được xác định trong cả hai trường hợp sử dụng:
+![Diagram](https://www.planttext.com/api/plantuml/png/V971Yi8m48RlUOevheU-G5d4Wy8kh53G5nYRmGsaISbC2o8-cGSVoLUmnJJKLipn__zyyqzolzvMB1YagQmgBJB3fggjFn71MK5tCg0e_AuXXvq4uuxHgV5KaPCjoR_NKrDCHIK6pPtnPrY-zr5OgekAimPfYmwF5E98W1QjqIWq-5-BQ32sOp61YcUJ8lYIcFsSL8oh9bnJl_CITOs21sJwGQVjg1wB3zIR2HIeMvtQGUm8wHcpR3dRCmVZX0AMmg_1sHxZv9JINvXMpA5XOZNZVCYkoEd--ny0003__mC0)
+
+### 5.2. Tóm tắt kết quả thống nhất
+- Lớp Employee là thực thể cốt lõi tương tác với cả **TimecardManager** và **PaymentProcessor** để xử lý việc gửi thẻ chấm công và lựa chọn thanh toán.
+- Lớp **DatabaseHandler** đóng vai trò là thành phần chia sẻ để lưu trữ dữ liệu liên tục, đảm bảo quản lý dữ liệu nhất quán trong mọi trường hợp sử dụng.
