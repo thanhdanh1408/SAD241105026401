@@ -41,7 +41,7 @@
 | Thái Sinh Gia Bảo       | 3. Xác định các phần tử thiết kế   | Hoàn thành      |
 | Văn Vũ Bảo Ngọc         | 4. Thiết kế hệ thống con           | Hoàn thành      |
 | Cả nhóm                 | 5. Thiết kế các lớp                | Hoàn thành      |
-|                         | 6. Kết luận                        | Hoàn thành      |
+| Cả nhóm                 | 6. Kết luận                        | Hoàn thành      |
 
 ---
 
