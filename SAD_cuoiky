@@ -165,7 +165,7 @@ dụng các menu lựa chọn sẵn.
 + Hỗ trợ sao lưu và khôi phục dữ liệu khi có sự cố. 
 
 
-2.Phân tích các ca sử dụng
+**2.Phân tích các ca sử dụng**
 Kiến trúc đề xuất
 Hệ thống Mentcare được thiết kế dựa trên kiến trúc 3 lớp, bao gồm:
 - Lớp giao diện (Presentation Layer):
